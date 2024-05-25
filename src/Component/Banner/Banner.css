@@ -1,0 +1,159 @@
+/* .Banner-Main {
+  background-size: cover;
+  background-position: center;
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 #ebebeb, 0 6px 20px 0 #ebebeb;
+}
+
+.Banner-content {
+  margin: 0px 1rem;
+  color: #ffffff;
+}
+.Banner-content button {
+  margin-top: 2rem;
+  padding: 0.6rem 1rem;
+  font-size: small;
+} */
+
+.Banner-Main {
+  background-size: cover;
+  background-position: center;
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 20px;
+  position: relative; /* Required for the pseudo-element */
+}
+
+.Banner-Main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  box-shadow: -100px 0 50px -30px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 250px 0 150px -100px rgba(0, 0, 0, 0.7); /* Inner shadow */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.Banner-content {
+  margin: 0px 1rem;
+  color: #ffffff;
+  z-index: 1; /* Ensure the content is above the shadow */
+}
+
+.Banner-content button {
+  margin-top: 2rem;
+  padding: 0.6rem 1rem;
+  font-size: small;
+}
+
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* MODEl CODE ALLL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-header {
+  padding: 0.5rem !important;
+  margin: 0px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+.modal-dialog {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 70%;
+  width: 45%;
+  padding: 10px;
+}
+.modal-content {
+  border: none;
+}
+
+.modal-body input {
+  width: 100%;
+  border-radius: 6px;
+  /* margin: 0.5rem 0px; */
+  border: none;
+  padding: 5px 0.5rem;
+  box-shadow: 0 2px 4px 0 #ebebeb, 0 3px 10px 0 #ebebeb;
+  outline: none; /* Remove default outline */
+  transition: border 0.3s; /* Smooth transition for border changes */
+}
+.modal-body input:focus {
+  border: none !important;
+}
+.modal-body h5 {
+  margin: 1rem 0px;
+  font-size: small;
+}
+.file-input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  border: #ebebeb dotted 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Optional: background color */
+  text-align: center; /* Center text alignment */
+  padding: 10px; /* Add padding if needed */
+  box-sizing: border-box;
+}
+
+.Upload-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.placeholder-text {
+  font-size: 14px;
+  color: #6c757d; /* Placeholder text color */
+  margin-bottom: 10px; /* Space between text and button */
+  z-index: 1; /* Ensure text is above the input */
+}
+
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1; /* Ensure button is above the input */
+}
+.custom-file-label svg {
+  color: #0056b3;
+  font-size: 2.5rem;
+}
+
+.modal-footer button {
+  border-radius: 20px;
+  padding: 5px 1rem;
+  font-size: small;
+}
