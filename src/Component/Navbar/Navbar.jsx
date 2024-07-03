@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import Profileuiu from "../../Images/Profileuiu.jpg";
-import logo from "../../Images/logo.jpg";
+import logo from "../../Images/logo.png";
 
 const Navbar = () => {
   return (
